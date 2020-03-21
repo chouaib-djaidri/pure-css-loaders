@@ -76,34 +76,32 @@ body {
 
 /* Loader 01 */
 .loader-1 svg {
-  width: 4rem;
+  width: 4.5rem;
   transform-origin: center;
-  animation: rotate4 2s linear infinite;
+  animation: loader1-1 2s linear infinite;
 }
 .loader-1 circle {
   fill: none;
-  stroke: hsl(214, 97%, 59%);
+  stroke: #3189fc;
   stroke-width: 4;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
   stroke-linecap: round;
-  animation: dash4 1.5s ease-in-out infinite;
+  animation: loader2-2 2s linear infinite;
 }
-@keyframes rotate4 {
+@keyframes loader1-1 {
   100% {
     transform: rotate(360deg);
   }
 }
-@keyframes dash4 {
+@keyframes loader2-2 {
   0% {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
   }
-  50% {
-    stroke-dasharray: 90, 200;
-    stroke-dashoffset: -35px;
-  }
+
   100% {
+    stroke-dasharray: 90, 200;
     stroke-dashoffset: -125px;
   }
 }
@@ -117,7 +115,7 @@ body {
     var(--c) 0 50%;
   background-size: 10px 10px;
   background-repeat: no-repeat;
-  animation: s8 1s infinite;
+  animation: loader2 1s infinite;
   position: relative;
 }
 .loader-2::before {
@@ -130,8 +128,27 @@ body {
   mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
   border-radius: 50%;
 }
-@keyframes s8 {
+@keyframes loader2 {
   100% {
     transform: rotate(0.5turn);
+  }
+}
+
+/* Loader 03 */
+.loader-3 {
+  border: 6px solid #0d9488;
+  border-left-color: transparent;
+  width: 4rem;
+  height: 4rem;
+  animation: loader3 1s linear infinite;
+  border-radius: 50%;
+}
+@keyframes loader3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

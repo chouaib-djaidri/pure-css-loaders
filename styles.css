@@ -152,3 +152,36 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Loader 04 */
+.loader-4 {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.loader-4::before,
+.loader-4::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+.loader-4::before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #ffa20d 0%, #ea3333 100%);
+  animation: loader4 0.75s infinite linear;
+}
+.loader-4::after {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes loader4 {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -185,3 +185,38 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Loader 05 */
+.loader-5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader-5::before,
+.loader-5::after {
+  position: absolute;
+  content: "";
+  height: 6rem;
+  width: 6rem;
+  border: 1rem solid #7c3aed;
+  border-radius: 50%;
+  animation: loader5 2s linear infinite;
+}
+.loader-5::after {
+  opacity: 0;
+  animation-delay: 1s;
+}
+@keyframes loader5 {
+  0% {
+    border: 1rem solid #7c3aed;
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    border: 0 solid #7c3aed;
+    transform: scale(1);
+    opacity: 0;
+  }
+}

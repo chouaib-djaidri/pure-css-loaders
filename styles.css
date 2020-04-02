@@ -352,3 +352,30 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Loader 08 */
+.loader-8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+}
+.loader-8::after {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border: 8px solid #dddddd;
+  border-top-color: #65a30d;
+  border-radius: 50%;
+  animation: loader8 0.75s linear infinite;
+}
+@keyframes loader8 {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

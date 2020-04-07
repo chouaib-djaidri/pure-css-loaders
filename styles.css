@@ -506,3 +506,34 @@ body {
     animation-timing-function: ease-in;
   }
 }
+
+/* Loader 11 */
+.loader-11 {
+  display: block;
+  width: 8rem;
+  height: 6px;
+  border-radius: 1rem;
+  background-color: #dddddd;
+  position: relative;
+}
+.loader-11::before {
+  content: "";
+  position: absolute;
+  background: #0f172a;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 1rem;
+  animation: loader11 1s ease-in-out infinite;
+}
+@keyframes loader11 {
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
